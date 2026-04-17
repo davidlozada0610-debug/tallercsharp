@@ -1,0 +1,6 @@
+C:\Users\usuario\Documents\tallerseccionA\talleriujo01\talleriujo01\bin\Debug\talleriujo01.exe.config
+C:\Users\usuario\Documents\tallerseccionA\talleriujo01\talleriujo01\bin\Debug\talleriujo01.exe
+C:\Users\usuario\Documents\tallerseccionA\talleriujo01\talleriujo01\bin\Debug\talleriujo01.pdb
+C:\Users\usuario\Documents\tallerseccionA\talleriujo01\talleriujo01\obj\Debug\talleriujo01.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Documents\tallerseccionA\talleriujo01\talleriujo01\obj\Debug\talleriujo01.exe
+C:\Users\usuario\Documents\tallerseccionA\talleriujo01\talleriujo01\obj\Debug\talleriujo01.pdb
