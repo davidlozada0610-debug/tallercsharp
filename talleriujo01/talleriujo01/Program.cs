@@ -57,12 +57,16 @@ namespace talleriujo01
         Console.WriteLine("(!) Se guardo la alerta en seguridad.txt");
     }
 
-    //FIN DEL DESAFÍO 1
+    //*FIN DEL DESAFÍO 1*
     
-    //Inicio del Desafio 2
+    //*Inicio del Desafio 2*
+    
+    
     int notafinal = int.Parse(nota);
     
     if(notafinal>=90) {
+    	
+    	//Creamos la ruta para el nuevo archivo en la misma carpeta de antes
     	string carpeta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DatosIUJO");
     	string archivosobresalientes = Path.Combine(carpeta, "sobresalientes.txt");
     	
@@ -73,25 +77,41 @@ namespace talleriujo01
         
         Console.WriteLine("(!) Se guardo el registro del alumno sobresaliente.");
     }
+ //*FIN DEL DESAFIO 2*
  
+ //*Inicio del Desafio 3*
+
+    //Ahora le pedimos al usuario que escriba el nombre a buscar
+    Console.Write("Escriba el nombre del alumno que desea buscar: ");
+    string nombreABuscar = Console.ReadLine(); 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-			
-			
-			
-			
-			
-			
-			
-			
+    bool encontrado = false;
+
+    // Ruta del archivo original (donde guardamos todo al principio)
+    string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DatosIUJO", "notas.txt");
+
+    if (File.Exists(rutaArchivo)) {
+        string[] lineas = File.ReadAllLines(rutaArchivo);
+
+        foreach (string cadalinea in lineas) {
+            // Buscamos lo que el usuario escribió por teclado
+            if (cadalinea.Contains(nombreABuscar)) {
+                encontrado = true;
+                break;
+            }
+        }
+
+        // 3. Resultado de la búsqueda
+        if (encontrado) {
+            Console.WriteLine("(+) El alumno {0} si esta registrado. (Consulta: {1})", nombreABuscar, fecha);
+        } else {
+            Console.WriteLine("(-) No se encontro a '{0}' en el sistema.", nombreABuscar);
+        }
+    } else {
+        Console.WriteLine("(!) Error: El archivo 'notas.txt' no existe todavia.");
+    }
+    //FIN DEL DESAFÍO 3
+  
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
