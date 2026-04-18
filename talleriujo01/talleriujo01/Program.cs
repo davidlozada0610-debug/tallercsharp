@@ -58,6 +58,32 @@ namespace talleriujo01
     }
 
     //FIN DEL DESAFÍO 1
+    
+    //Inicio del Desafio 2
+    int notafinal = int.Parse(nota);
+    
+    if(notafinal>=90) {
+    	string carpeta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DatosIUJO");
+    	string archivosobresalientes = Path.Combine(carpeta, "sobresalientes.txt");
+    	
+    	//Escribo los datos usando el sw3 para no confundirlo con los otros
+    	using (StreamWriter sw3 = new StreamWriter(archivosobresalientes, true)) {
+            sw3.WriteLine(string.Format("Alumno Destacado: {0} | notafinal: {1} | Fecha: {2}", nombre, notafinal, fecha));
+        }
+        
+        Console.WriteLine("(!) Se guardo el registro del alumno sobresaliente.");
+    }
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 			
 			
 			
